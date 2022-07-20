@@ -1,7 +1,7 @@
 
 # Build Your Own Builders
 
-byob is a Typescript micro library to allow creating fluent object builders for your test data.
+byob is a Typescript micro library for creating fluent object builders for your test data.
 
 ## Motivation
 
