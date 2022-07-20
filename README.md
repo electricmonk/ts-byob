@@ -22,8 +22,11 @@ We can create a product builder:
 ```typescript
 const aProduct = builderFor<Product>({id: "0", name: "foo", price: 0, currency: "usd", photos: []});
 
-const product1 = aProduct(); // {id: "0", name: "foo", price: 0, currency: "usd", photos: []}
-const product2 = aProduct({name: bar}); // {id: "0", name: "bar", price: 0, currency: "usd", photos: []}
+const product1 = aProduct(); 
+// {id: "0", name: "foo", price: 0, currency: "usd", photos: []}
+
+const product2 = aProduct({name: bar});
+ // {id: "0", name: "bar", price: 0, currency: "usd", photos: []}
 ```
 
 Note that all defaults are the same scalar values provided upon creating the builder. If we want to create fresh values for each new object (for instance, current Date, random ID), we can provide a function initializer:
@@ -31,6 +34,9 @@ Note that all defaults are the same scalar values provided upon creating the bui
 ```typescript
 const aProductWithRandomId = builderFor<Product>(() => ({id: nanoid(), name: "foo", price: 0, currency: "usd", photos: []}));
 
-const product1 = aProduct(); // {id: <a random nanoid>, name: "foo", price: 0, currency: "usd", photos: []}
-const product2 = aProduct(); // {id: <another random nanoid>, name: "bar", price: 0, currency: "usd", photos: []}
+const product1 = aProduct(); 
+// {id: <a random nanoid>, name: "foo", price: 0, currency: "usd", photos: []}
+
+const product2 = aProduct();
+// {id: <another random nanoid>, name: "bar", price: 0, currency: "usd", photos: []}
 ```

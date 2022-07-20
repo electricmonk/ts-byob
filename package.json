@@ -10,7 +10,8 @@
     "name": "electricmonk",
     "url": "https://github.com/electricmonk"
   },
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^28.1.6",
