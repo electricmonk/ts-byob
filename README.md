@@ -1,9 +1,25 @@
 
 # Build Your Own Builders
 
-byob is a Typescript micro library to allow creating fluent object builders for your test data. 
+byob is a Typescript micro library to allow creating fluent object builders for your test data.
 
-## Usage:
+## Motivation
+
+Tests that depend on static fixtures are harder to read, understand and maintain. My [blog post](https://www.shaiyallin.com/post/beautiful-object-builders-in-typescript) started to develop this idea, and this library provides a simple, DRY way to create builders.
+
+## Installation
+
+```sh
+npm install -D ts-byob
+```
+
+or
+
+```sh
+yarn add -D ts-byob
+```
+
+## Usage
 
 Given a type `Product`:
 
