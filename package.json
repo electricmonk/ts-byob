@@ -1,0 +1,24 @@
+{
+  "name": "ts-byob",
+  "version": "1.0.0",
+  "description": "beautiful object builders for typescript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/electricmonk/ts-byob"
+  },
+  "author": {
+    "name": "electricmonk",
+    "url": "https://github.com/electricmonk"
+  },
+  "main": "src/index.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.7",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
