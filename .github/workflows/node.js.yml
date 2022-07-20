@@ -39,9 +39,13 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: yarn
-      - run: yarn build
-      - run: yarn publish
+      - id: check
+        uses: EndBug/version-check@v1
+        with:
+          file-url: https://unpkg.com/ts-byob@1.0.0/package.json
+          static-checking: localIsNew          
+      - if: steps.check.outputs.changed == 'true'
+        run: yarn && yarn build && yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
