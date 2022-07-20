@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 .Trashes
 logs
@@ -8,10 +9,3 @@ pids
 *.seed
 dist
 node_modules
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
