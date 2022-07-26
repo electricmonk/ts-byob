@@ -35,4 +35,23 @@ describe('meta builder', () => {
 
     expect(aProduct({id: 666})).toEqual({id: 666, name: 'Eddie'});
   });
+
+  it('provides sequences', () => {
+    type A = {
+      id: number;
+    }
+
+    const aProduct = builderFor<A>(({next}) => ({ id: next("id"),}));
+    expect(aProduct()).toEqual({id: 0});
+    expect(aProduct()).toEqual({id: 1});
+  });
+
+  it('creates a separate sequence for each builder', () => {
+    type A = {
+      id: number;
+    }
+
+    expect(builderFor<A>(({next}) => ({ id: next("id")}))()).toEqual({id: 0});
+    expect(builderFor<A>(({next}) => ({ id: next("id")}))()).toEqual({id: 0});
+  });
 })
