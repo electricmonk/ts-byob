@@ -25,9 +25,10 @@ function initialize<T>(initializer: Initializer<T>, context: Context) {
 export const builderFor = <T>(defaults: Initializer<T>) => {
   const context = newContext();
 
-  return (overrides: Partial<T> = {}) => ({
+  const builder: (overrides?: Partial<T>) => T = (overrides = {}) => ({
     ...initialize(defaults, context),
     ...overrides
   });
 
+  return builder;
 }

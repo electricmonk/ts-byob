@@ -1,6 +1,6 @@
 {
   "name": "ts-byob",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "beautiful object builders for typescript",
   "repository": {
     "type": "git",
