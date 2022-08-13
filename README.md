@@ -38,7 +38,7 @@ test('product list returns products according to filter', () => {
 
 // testkit.ts
 export const aProduct = builderFor<Product>({
-  id: "0", name: "", price: 0, currency: "usd", photos: []
+  id: "0", name: "", price: 0, currency: "usd", dateCreated: new Date()
 });
 
 export class InMemoryProductCatalog implements ProductCatalog {
